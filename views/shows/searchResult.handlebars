@@ -1,0 +1,19 @@
+{{#if hasError}}
+        <div>
+            <p class='error'>{{error}}</p>
+        </div>
+{{else}}
+        {{#if showsSearchList.length}}
+            <h2>Shows Found</h2>
+            <h3>Search keyword: <span id='searchTerm'>{{searchTerm}}</span></h3>
+            <div>
+                <ul>
+                    {{#each showsSearchList}}
+                    <li>
+                        <a aria-label = "showName" href="/show/{{this.show.id}}">{{this.show.name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div> 
+        {{/if}}
+{{/if}}

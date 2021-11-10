@@ -1,0 +1,38 @@
+body{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.searchButton{
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border: 0.1rem solid #555;
+}
+
+#searchBox{
+    padding: 0.2rem 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #555;
+    border-radius: 0.2rem;
+}
+
+#searchTerm{
+  font-style: italic;
+}
+
+.error{
+    color: #990033;
+}
+
+#showPoster{
+    border:rgb(43, 37, 37) solid 0.1rem;
+}
+
+.showName{
+    text-decoration:underline;
+}
+
+.show dt{
+    font-style: italic;
+    text-shadow: 0.2px 0.2px;
+}

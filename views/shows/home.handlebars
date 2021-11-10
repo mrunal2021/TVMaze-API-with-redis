@@ -1,0 +1,17 @@
+{{#if hasError}}
+    <div>
+        <p class="error">{{error}}</p>
+    </div>
+{{else}}
+    {{#if showsList.length}}
+        <div>
+                <ul>
+                    {{#each showsList}}
+                    <li>
+                        <a aria-label = "showName" href="/show/{{this.id}}">{{this.name}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+        </div> 
+    {{/if}}    
+{{/if}}

@@ -1,0 +1,17 @@
+{{#if hasError}}
+    <div>
+        <p class="error">{{error}}</p>
+    </div>
+
+{{else}}
+    {{#if popularSearches.length}}
+    <h2>Popular Searches</h2>
+    <ol>
+        {{#each popularSearches}}
+            <li>
+                {{this}}
+            </li>
+        {{/each}}
+    </ol>
+    {{/if}}
+{{/if}}

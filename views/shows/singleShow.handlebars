@@ -1,0 +1,33 @@
+{{#if hasError}}
+  <div>
+      <p class='error'>{{error}}</p>
+  </div>
+
+{{else}}
+          <div class='show'> 
+            <h2 class='showName'>{{ show.name }}</h2> 
+            <img id='showPoster' alt= "{{ show.name }}" src="{{ show.image.medium }}"/> 
+            <dl> 
+              <dt>Language</dt> 
+                <dd>{{ show.language }}</dd> 
+              <dt>Genres</dt> 
+                  {{#if show.genres}}
+                    <dd>  
+                      <ul> 
+                        {{#each show.genres}}
+                            <li>{{ this }}</li> 
+                        {{/each}}
+                      </ul> 
+                    </dd>
+                  {{else}}
+                      <dd>NA</dd>
+                  {{/if}} 
+              <dt>Average Rating</dt> 
+                <dd>{{ show.rating.average }}</dd> 
+              <dt>Network</dt> 
+                <dd>{{ show.network.name }}</dd> 
+              <dt>Summary</dt> 
+                <dd>{{ show.summary }}</dd> 
+            </dl> 
+          </div> 
+{{/if}}
